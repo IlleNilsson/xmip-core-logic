@@ -1,7 +1,13 @@
 # xmip-core-logic
 
-Common Xmip contracts for method and operation semantics layered over Transport, Message, and Contract capabilities.
+The Logic capability, in one sentence (ADR-0043): a Logic technology turns a
+Stream that arrived on a transport into a named operation with typed
+arguments, and an operation's result back into a Stream, using a contract to
+type both.
 
-Logic does not move bytes, serialize representations, evaluate schemas, or orchestrate Receive and Send. Technology modules such as HTTP API, SOAP, and gRPC implement those operation semantics against this boundary.
+SOAP does it with a WSDL, the HTTP API with an OpenAPI document, gRPC with a
+protobuf service. None of them moves bytes, that is transport; none of them
+orders work, that is process. What they own is the method. Each technology is
+its own repository mounted directly under this one: `soap`, `http-api`, `grpc`.
 
-Status: planned; no public Logic API is implemented yet.
+Status: the trait and its shapes are here; three technologies implement it.
