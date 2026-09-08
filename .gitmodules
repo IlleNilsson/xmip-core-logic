@@ -1,0 +1,9 @@
+[submodule "xmip-core-logic-soap"]
+	path = soap
+	url = https://github.com/IlleNilsson/xmip-core-logic-soap.git
+[submodule "xmip-core-logic-http-api"]
+	path = http-api
+	url = https://github.com/IlleNilsson/xmip-core-logic-http-api.git
+[submodule "xmip-core-logic-grpc"]
+	path = grpc
+	url = https://github.com/IlleNilsson/xmip-core-logic-grpc.git
