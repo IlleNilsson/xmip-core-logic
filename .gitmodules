@@ -7,3 +7,6 @@
 [submodule "xmip-core-logic-grpc"]
 	path = grpc
 	url = https://github.com/IlleNilsson/xmip-core-logic-grpc.git
+[submodule "xmip-core-logic-matter"]
+	path = matter
+	url = https://github.com/IlleNilsson/xmip-core-logic-matter.git
