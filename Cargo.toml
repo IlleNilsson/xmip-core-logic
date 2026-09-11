@@ -10,7 +10,8 @@ repository = "https://github.com/IlleNilsson/xmip-core-logic"
 description = "The Logic capability: a Stream that arrived on a transport becomes a named operation with typed arguments, and an operation's result becomes a Stream again, a contract typing both."
 
 [lib]
-path = "src/lib.rs"
+# A host crate: the technologies mount beside this source (ADR-0049).
+path = ".src/lib.rs"
 
 [dependencies]
 # The Stream an operation's arguments and result travel as, and the contract
