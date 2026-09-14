@@ -117,26 +117,7 @@ pub struct Reply {
     pub body: Stream,
 }
 
-#[derive(Debug)]
-pub struct LogicError {
-    pub message: String,
-}
-
-impl LogicError {
-    pub fn new(message: impl Into<String>) -> Self {
-        Self {
-            message: message.into(),
-        }
-    }
-}
-
-impl core::fmt::Display for LogicError {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        f.write_str(&self.message)
-    }
-}
-
-impl std::error::Error for LogicError {}
+xcore::declare_error!(LogicError);
 
 /// The one trait. A technology implements all four directions; a Location
 /// uses the two its side needs.
