@@ -14,6 +14,7 @@ description = "The Logic capability: a Stream that arrived on a transport become
 path = ".src/lib.rs"
 
 [dependencies]
+sdk = { package = "xmip-core-sdk", git = "https://github.com/IlleNilsson/xmip-core-sdk", branch = "main" }
 # The Stream an operation's arguments and result travel as, and the contract
 # that types them. Transport is not here: a Logic technology reads what a
 # transport delivered and writes what a transport will carry, through the
