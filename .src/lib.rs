@@ -18,7 +18,7 @@
 //! Location it writes an [`Invocation`] into a [`Request`] and reads the reply
 //! Stream into an [`Outcome`]. The transport carries the bytes either way.
 
-use contract::ContractId;
+use sdk::contract::ContractId;
 use stream::Stream;
 
 /// An operation's name in its service's own terms: `OrderService` and
