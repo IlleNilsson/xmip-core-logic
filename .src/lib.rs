@@ -110,11 +110,15 @@ pub struct Request {
 }
 
 /// A reply the transport should carry back, or received: the body and what
-/// travels beside it, an HTTP status or gRPC trailers among them.
+/// travels beside it — before it, an HTTP status among the headers, and
+/// after it the trailers, where gRPC puts its status.
 #[derive(Clone, Debug)]
 pub struct Reply {
     pub headers: Vec<Header>,
     pub body: Stream,
+    /// What travels after the body: HTTP/2's trailing header block, or a
+    /// chunked answer's trailer. Empty where the technology writes none.
+    pub trailers: Vec<Header>,
 }
 
 xcore::declare_error!(LogicError);
