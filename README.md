@@ -16,4 +16,4 @@ HTTP/2 writes a header block after the body, and gRPC puts its status there
 empty.
 
 Status: the trait and its shapes are here; four technologies implement it.
-`architecture.toml` names them and carries each one's maturity.
+`architecture.xmip` names them and carries each one's maturity.
