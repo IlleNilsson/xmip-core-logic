@@ -123,6 +123,14 @@ pub struct Reply {
 
 xcore::declare_error!(LogicError);
 
+/// A body that could not be read is the technology's failure, never an empty
+/// body: `stream.load()?` is how a technology reads one whole.
+impl From<stream::Unread> for LogicError {
+    fn from(unread: stream::Unread) -> Self {
+        Self::new(unread.to_string())
+    }
+}
+
 /// The one trait. A technology implements all four directions; a Location
 /// uses the two its side needs.
 pub trait Logic: Send + Sync {
