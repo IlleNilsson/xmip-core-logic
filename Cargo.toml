@@ -15,9 +15,9 @@ path = ".src/lib.rs"
 # that types them. Transport is not here: a Logic technology reads what a
 # transport delivered and writes what a transport will carry, through the
 # Arrival and Request shapes below, never through a socket.
-xcore = { package = "xmip-core", git = "https://github.com/IlleNilsson/xmip-core", branch = "main" }
-stream = { package = "xmip-core-stream", git = "https://github.com/IlleNilsson/xmip-core-stream", branch = "main" }
-contract = { package = "xmip-core-contract", git = "https://github.com/IlleNilsson/xmip-core-contract", branch = "main" }
+xcore = { workspace = true }
+stream = { workspace = true }
+contract = { workspace = true }
 
 [lints]
 workspace = true
